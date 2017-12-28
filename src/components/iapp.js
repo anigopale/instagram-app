@@ -21,7 +21,7 @@ export default class Iapp extends Component {
     else {
       return (
         <div>
-          <Search />
+          <Search onSearchSubmit = {(term) => console.log("term reached to <Iapp />": term)} />
         </div>
       )
     }

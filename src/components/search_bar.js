@@ -9,12 +9,18 @@ export default class Search extends Component {
     console.log(event.target.value);
     this.setState( { term: event.target.value });
   }
+  onFormSubmit() {
+    this.props.onSearchSubmit(this.state.term)
+  }
 
   render(){
     return (
       <div>
-        <form onSubmit={()=>{console.log(this.state.term)}}>
-          <input type="text" onChange={this.onInputChange.bind(this)} />
+        <form onSubmit={this.onFormSubmit.bind(this)}>
+          <input
+            value={this.state.term}
+            onChange={this.onInputChange.bind(this)}
+            />
         </form>
       </div>
     )

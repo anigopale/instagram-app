@@ -11,7 +11,7 @@ class App extends Component {
 
       return (
       <div>
-        <Auth loginStatus = {status => {console.log("login status:", status)}} />
+        <Auth />
         <Iapp />
       </div>
     );
