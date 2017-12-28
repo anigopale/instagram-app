@@ -6,17 +6,11 @@ import Auth from './components/auth';
 class App extends Component {
 
 
-  onbuttonClick() {
-
-  }
-
   render() {
 
-    console.log(this.state);
-    return (
+      return (
       <div>
-        <Auth/>
-        
+        <Auth loginStatus = {status => {console.log("login status:", status)}} />
       </div>
     );
   }

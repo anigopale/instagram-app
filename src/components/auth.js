@@ -8,12 +8,12 @@ export default class Auth extends Component {
   componentDidMount() {
     localStorage.setItem( 'token', this.state.token );
     if(this.state.token) {
-      this.setState({ loggedin: true })
+      this.setState({ loggedin: true });
     }
   }
 
   renderButtons() {
-    if( this.state.loggedin)
+    if( this.state.loggedin )
     {
       return (
         <div>
@@ -26,7 +26,7 @@ export default class Auth extends Component {
     return (
       <div>
         <a href="https://api.instagram.com/oauth/authorize/?client_id=5ad51dbdb79e43ca82a3e3c419c8a967&redirect_uri=http://localhost:3000&response_type=token&scope=basic+public_content">
-          <button onClick={this.onbuttonClick}>Login</button>
+          <button>Login</button>
         </a>
       </div>
     )
