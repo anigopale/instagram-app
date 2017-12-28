@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Search from './search_bar';
 
 export default class Iapp extends Component {
   constructor(props) {
@@ -15,6 +16,13 @@ export default class Iapp extends Component {
     if(!this.state.login) {
       return (
         <div>You must be logged in</div>
+      );
+    }
+    else {
+      return (
+        <div>
+          <Search />
+        </div>
       )
     }
   }
