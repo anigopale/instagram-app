@@ -4,12 +4,27 @@ import Search from './search_bar';
 export default class Iapp extends Component {
   constructor(props) {
     super(props);
-    this.state = { login: false }
+    this.state = { login: false, users: [] }
+
+  }
+
+  fetchData(term){
+    fetch(`https://api.instagram.com/v1/users/search?q=${term}&${localStorage.token}`)
+      .then(response => response.json())
+      .then(response => this.setState({ users: response.data}))
   }
 
   componentDidMount(){
     if(localStorage.token !== "undefined")
       this.setState({ login: true })
+  }
+  componentDidUpdate() {
+    console.log(this.state.users);
+  }
+
+  onSearchSubmit(term){
+    console.log("inside onSearchSubmit()");
+    this.fetchData(term);
   }
 
   renderComponent() {
@@ -21,7 +36,7 @@ export default class Iapp extends Component {
     else {
       return (
         <div>
-          <Search onSearchSubmit = {(term) => console.log("term reached to <Iapp />": term)} />
+          <Search onSearchSubmit = {this.onSearchSubmit.bind(this)} />
         </div>
       )
     }
