@@ -41,7 +41,7 @@ export default class Iapp extends Component {
 
   renderSearchResults(){
     if(this.state.option === "media")
-      return <Media />;
+      return <Media media={this.state.media} />;
     else
       return <Tags tags={this.state.tags} />;
   }
