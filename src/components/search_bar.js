@@ -21,6 +21,7 @@ export default class Search extends Component {
             value={this.state.term}
             onChange={this.onInputChange.bind(this)}
             />
+          <button type="submit">Search</button>
         </form>
       </div>
     )

@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
 import Search from './search_bar';
+import { TAGS_URL } from '../assets/urls';
 
 export default class Iapp extends Component {
   constructor(props) {
     super(props);
-    this.state = { login: false, users: [] }
-
+    this.state = { login: false, tags: [] };
   }
 
   fetchData(term){
-    fetch(`https://api.instagram.com/v1/users/search?q=${term}&${localStorage.token}`)
+    fetch(`${TAGS_URL}?q=${term}&${localStorage.token}`)
       .then(response => response.json())
-      .then(response => this.setState({ users: response.data}))
+      .then(response => this.setState({ tags: response.data}));
   }
 
   componentDidMount(){
@@ -19,7 +19,7 @@ export default class Iapp extends Component {
       this.setState({ login: true })
   }
   componentDidUpdate() {
-    console.log(this.state.users);
+    console.log(this.state.tags);
   }
 
   onSearchSubmit(term){
