@@ -11,6 +11,7 @@ export default class Tags extends Component{
     console.log("tags received by Tags component",this.props.tags);
     return(
       <ul>
+        tags component
         {this.renderTagItems()}
       </ul>
     )

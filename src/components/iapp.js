@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Search from './search_bar';
 import Tags from './tags';
 import Options from './options';
+import Media from './media';
 import { TAGS_URL } from '../assets/urls';
 
 export default class Iapp extends Component {
@@ -29,6 +30,13 @@ export default class Iapp extends Component {
     this.fetchData(term);
   }
 
+  renderSearchResults(){
+    if(this.state.option === "media")
+      return <Media />;
+    else
+      return <Tags tags={this.state.tags} />;
+  }
+
   renderComponent() {
     if(!this.state.login) {
       return (
@@ -40,7 +48,7 @@ export default class Iapp extends Component {
         <div>
           <Options selectedOption={(option)=>{this.setState({ option })}} />
           <Search onSearchSubmit={this.onSearchSubmit.bind(this)} option={this.state.option} />
-          <Tags tags={this.state.tags} />
+          {this.renderSearchResults()}
         </div>
       )
     }
