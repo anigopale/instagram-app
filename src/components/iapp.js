@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import Search from './search_bar';
 import Tags from './tags';
+import Options from './options';
 import { TAGS_URL } from '../assets/urls';
 
 export default class Iapp extends Component {
   constructor(props) {
     super(props);
-    this.state = { login: false, tags: [] };
+    this.state = { login: false, tags: [], option: "tag" };
   }
 
   fetchData(term){
@@ -37,7 +38,8 @@ export default class Iapp extends Component {
     else {
       return (
         <div>
-          <Search onSearchSubmit = {this.onSearchSubmit.bind(this)} />
+          <Options selectedOption={(option)=>{this.setState({ option })}} />
+          <Search onSearchSubmit={this.onSearchSubmit.bind(this)} option={this.state.option} />
           <Tags tags={this.state.tags} />
         </div>
       )
