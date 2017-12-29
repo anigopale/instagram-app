@@ -20,7 +20,7 @@ export default class Iapp extends Component {
       this.setState({ login: true })
   }
   componentDidUpdate() {
-    console.log(this.state.tags);
+    console.log("inside iapp component:",this.state.tags);
   }
 
   onSearchSubmit(term){
@@ -38,7 +38,7 @@ export default class Iapp extends Component {
       return (
         <div>
           <Search onSearchSubmit = {this.onSearchSubmit.bind(this)} />
-          <Tags />
+          <Tags tags={this.state.tags} />
         </div>
       )
     }
