@@ -3,19 +3,27 @@ import Search from './search_bar';
 import Tags from './tags';
 import Options from './options';
 import Media from './media';
-import { TAGS_URL } from '../assets/urls';
+import { TAGS_URL, MEDIA_URL } from '../assets/urls';
 
 export default class Iapp extends Component {
   constructor(props) {
     super(props);
-    this.state = { login: false, tags: [], option: "tag" };
+    this.state = { login: false, tags: [], option: "tag", media: [] };
   }
 
   fetchData(term){
-    fetch(`${TAGS_URL}?q=${term}&${localStorage.token}`)
-      .then(response => response.json())
-      .then(response => this.setState({ tags: response.data}));
+    if(this.state.option === "media"){
+      fetch(`${MEDIA_URL[0]}${term}${MEDIA_URL[1]}?${localStorage.token}`)
+        .then(response => response.json())
+        .then(response => this.setState({ media: response.data }));
+    }
+    else {
+      fetch(`${TAGS_URL}?q=${term}&${localStorage.token}`)
+        .then(response => response.json())
+        .then(response => this.setState({ tags: response.data }));
+    }
   }
+
 
   componentDidMount(){
     if(localStorage.token !== "undefined")
@@ -23,6 +31,7 @@ export default class Iapp extends Component {
   }
   componentDidUpdate() {
     console.log("inside iapp component:",this.state.tags);
+    console.log("",this.state.media);
   }
 
   onSearchSubmit(term){
