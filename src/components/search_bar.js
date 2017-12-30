@@ -8,10 +8,9 @@ export default class Search extends Component {
   onInputChange(event) {
     console.log(event.target.value);
     this.setState( { term: event.target.value });
+    this.props.onSearchSubmit(event.target.value)
   }
-  onFormSubmit() {
-    this.props.onSearchSubmit(this.state.term)
-  }
+
   placeholder(){
     if(this.props.option === "media")
       return "tagged "
@@ -22,14 +21,11 @@ export default class Search extends Component {
   render(){
     return (
       <div>
-        <form onSubmit={this.onFormSubmit.bind(this)}>
-          <input
+        <input
             value={this.state.term}
             onChange={this.onInputChange.bind(this)}
             placeholder={`search for ${this.placeholder()}${this.props.option}`}
             />
-          <button type="submit">Search</button>
-        </form>
       </div>
     )
   }
