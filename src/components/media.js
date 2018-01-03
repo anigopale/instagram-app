@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './style/media.css';
 
 export default class Media extends Component{
 
@@ -14,12 +15,12 @@ export default class Media extends Component{
     else if(this.props.term === ""){
       return <div>Results will be shown here</div>
     }
-    
+
     return this.props.media.map((item) => {
       return (
-        <li>
+        <div className="grid-media-item">
           <img src={item.images.standard_resolution.url} />
-        </li>
+        </div>
       )
     })
   }
@@ -27,9 +28,9 @@ export default class Media extends Component{
 
   render(){
     return(
-      <ul>
+      <div className="grid-media">
         {this.renderMediaItems()}
-      </ul>
+      </div>
     )
   }
 }

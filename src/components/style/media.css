@@ -1,0 +1,39 @@
+* { box-sizing: border-box; }
+
+html { overflow-y: scroll; }
+
+body { font-family: sans-serif; }
+
+.grid-media {
+
+}
+
+.grid-media:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.grid-media-sizer,
+.grid-media-item {
+  width: 33.333%;
+  padding: 10px;
+  -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+  -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+
+.grid-media-item {
+  float: left;
+}
+
+.grid-media-item img {
+  display: block;
+  max-width: 100%;
+}
+
+.grid-media-item:hover {
+  -webkit-filter: grayscale(50%);
+    filter: grayscale(50%);
+}

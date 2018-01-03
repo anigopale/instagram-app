@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './style/tags.css';
 
 export default class Tags extends Component{
   renderTagItems(){
@@ -15,15 +16,19 @@ export default class Tags extends Component{
     }
 
     return this.props.tags.map((tag) => {
-      return <li>{tag.name}</li>
+      if(tag.media_count%2 == 0)
+      return <div className="grid-item grid-item--height2">#{tag.name}</div>
+      else {
+        return <div className="grid-item">#{tag.name}</div>
+      }
     })
   }
 
   render(){
     return(
-      <ul>
+      <div className="grid">
         {this.renderTagItems()}
-      </ul>
+      </div>
     )
   }
 }

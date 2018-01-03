@@ -5,7 +5,7 @@ input[type=text]{
   border-radius: 4px;
   box-sizing: border-box;
   resize: vertical;
-  width: 200px;
+  width: 50%;
   -webkit-transition: width 0.4s ease-in-out;
   transition: width 0.4s ease-in-out;
 }
