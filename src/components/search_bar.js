@@ -7,7 +7,6 @@ export default class Search extends Component {
     this.state = { term: "" }
   }
   onInputChange(event) {
-    console.log(event.target.value);
     this.setState( { term: event.target.value });
     this.props.onSearchSubmit(event.target.value)
   }

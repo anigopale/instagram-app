@@ -17,7 +17,6 @@ export default class Tags extends Component{
   }
 
   render(){
-    console.log("tags received by Tags component",this.props.tags);
     return(
       <ul>
         tags component

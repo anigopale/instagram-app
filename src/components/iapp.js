@@ -31,13 +31,11 @@ export default class Iapp extends Component {
       this.setState({ login: true })
   }
   componentDidUpdate() {
-    console.log("inside iapp component:",this.state.tags);
-    console.log("",this.state.media);
+
   }
 
   onSearchSubmit(term){
     this.setState({ term })
-    console.log("inside onSearchSubmit()");
     this.fetchData(term);
   }
 
@@ -70,7 +68,6 @@ export default class Iapp extends Component {
   render(){
     return(
       <div className="iapp-container">
-        inside I-App component
         {this.renderComponent()}
       </div>
     );

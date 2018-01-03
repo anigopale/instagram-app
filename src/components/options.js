@@ -13,7 +13,6 @@ export default class Options extends Component {
   }
 
   render(){
-    console.log(this.state.option);
     return(
       <div className="options-container">
         <select onChange={this.handleChange.bind(this)}>

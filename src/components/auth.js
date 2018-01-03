@@ -36,10 +36,8 @@ export default class Auth extends Component {
   }
 
   render() {
-    console.log(localStorage);
     return (
       <div className="auth-container">
-        auth component
         {this.renderButtons()}
       </div>
 
