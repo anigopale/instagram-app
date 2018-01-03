@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './style/search_bar.css';
 
 export default class Search extends Component {
   constructor(props) {
@@ -20,8 +21,9 @@ export default class Search extends Component {
 
   render(){
     return (
-      <div>
+      <div className="search-container">
         <input
+            type="text"
             value={this.state.term}
             onChange={this.onInputChange.bind(this)}
             placeholder={`search for ${this.placeholder()}${this.props.option}`}

@@ -1,0 +1,18 @@
+select {
+  width: 25%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  cursor: pointer;
+}
+
+
+.options-container{
+  
+  padding-left: 20px;
+  padding-right: 20px;
+}

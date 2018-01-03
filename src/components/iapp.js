@@ -4,6 +4,7 @@ import Tags from './tags';
 import Options from './options';
 import Media from './media';
 import { TAGS_URL, MEDIA_URL } from '../assets/urls';
+import './style/iapp.css';
 
 export default class Iapp extends Component {
   constructor(props) {
@@ -65,7 +66,7 @@ export default class Iapp extends Component {
 
   render(){
     return(
-      <div>
+      <div className="iapp-container">
         inside I-App component
         {this.renderComponent()}
       </div>

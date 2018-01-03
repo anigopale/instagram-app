@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './style/options.css'
 
 export default class Options extends Component {
   constructor(props){
@@ -14,7 +15,7 @@ export default class Options extends Component {
   render(){
     console.log(this.state.option);
     return(
-      <div>
+      <div className="options-container">
         <select onChange={this.handleChange.bind(this)}>
           <option value="tags">Tags</option>
           <option value="media">Media</option>

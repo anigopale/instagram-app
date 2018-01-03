@@ -1,0 +1,43 @@
+.button-login {
+  background-color: #4CAF50;
+  color: white;
+  display: inline-block;
+  text-align: center;
+  padding: 15px 32px;
+  float: right;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+.button-login:hover {
+  background-color: white;
+  color: #4CAF50;
+}
+.button-logout {
+  background-color: #f44336;
+  color: white;
+  display: inline-block;
+  text-align: center;
+  padding: 15px 30px;
+  float: right;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+.button-logout:hover {
+  background-color: white;
+  color: #f44336;
+}
+
+.auth-container {
+  padding-top: 20px;
+  padding-right: 20px;
+  color: white;
+  background-color: #555555;
+  border-style: solid;
+  border-color: red;
+}
