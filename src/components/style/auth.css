@@ -22,7 +22,7 @@
   text-align: center;
   padding: 15px 30px;
   float: right;
-  border: none;
+  border: 1px solid #f44336;
   cursor: pointer;
   border-radius: 6px;
   -webkit-transition-duration: 0.4s;
@@ -34,10 +34,5 @@
 }
 
 .auth-container {
-  padding-top: 20px;
   padding-right: 20px;
-  color: white;
-  background-color: #555555;
-  border-style: solid;
-  border-color: red;
 }

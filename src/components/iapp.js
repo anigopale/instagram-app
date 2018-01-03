@@ -9,7 +9,7 @@ import './style/iapp.css';
 export default class Iapp extends Component {
   constructor(props) {
     super(props);
-    this.state = { login: false, tags: [], option: "tag", media: [] };
+    this.state = { login: false, tags: [], option: "tag", media: [], term: "" };
   }
 
   fetchData(term){
@@ -36,15 +36,16 @@ export default class Iapp extends Component {
   }
 
   onSearchSubmit(term){
+    this.setState({ term })
     console.log("inside onSearchSubmit()");
     this.fetchData(term);
   }
 
   renderSearchResults(){
     if(this.state.option === "media")
-      return <Media media={this.state.media} />;
+      return <Media media={this.state.media} term={this.state.term} />;
     else
-      return <Tags tags={this.state.tags} />;
+      return <Tags tags={this.state.tags} term={this.state.term} />;
   }
 
   renderComponent() {
@@ -58,7 +59,9 @@ export default class Iapp extends Component {
         <div>
           <Options selectedOption={(option)=>{this.setState({ option })}} />
           <Search onSearchSubmit={this.onSearchSubmit.bind(this)} option={this.state.option} />
-          {this.renderSearchResults()}
+          <div className="results-container">
+            {this.renderSearchResults()}
+          </div>
         </div>
       )
     }

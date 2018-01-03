@@ -1,4 +1,10 @@
 .iapp-container {
+
+}
+.results-container {
   border-color: red;
   border-style: solid;
+  background-color: white;
+  padding: 10px;
+  color: black;
 }
