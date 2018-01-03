@@ -13,7 +13,6 @@
 }
 .grid-media-item {
   display: inline-block;
-  background: #fff;
   padding: 1.5em;
   margin: 0 0 1.5em;
   width: 100%;
@@ -22,7 +21,14 @@
   -webkit-box-sizing: border-box;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
-
+  -webkit-filter: grayscale(70%);
+   filter: grayscale(70%);
+   -webkit-transition-duration: 0.4s;
+     transition-duration: 0.4s;
+}
+.grid-media-item:hover {
+  -webkit-filter: grayscale(0%);
+   filter: grayscale(0%);
 }
 img {
   max-width: 100%;
@@ -31,7 +37,7 @@ img {
 }
 
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 600px) {
     .grid-media {
         -moz-column-count: 2;
         -webkit-column-count: 2;
