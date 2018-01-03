@@ -11,6 +11,10 @@ export default class Media extends Component{
         return <div>Results will be shown here</div>
       }
     }
+    else if(this.props.term === ""){
+      return <div>Results will be shown here</div>
+    }
+    
     return this.props.media.map((item) => {
       return (
         <li>

@@ -10,6 +10,9 @@ export default class Tags extends Component{
         return <div>Results will be shown here</div>
       }
     }
+    else if(this.props.term === ""){
+      return <div>Results will be shown here</div>
+    }
 
     return this.props.tags.map((tag) => {
       return <li>{tag.name}</li>
