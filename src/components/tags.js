@@ -19,7 +19,6 @@ export default class Tags extends Component{
   render(){
     return(
       <ul>
-        tags component
         {this.renderTagItems()}
       </ul>
     )

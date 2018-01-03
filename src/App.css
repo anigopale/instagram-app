@@ -30,3 +30,8 @@
 .app-container {
   padding: 20px
 }
+
+body{
+  background-color: white;
+  color: black;
+}
