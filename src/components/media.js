@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './style/media.css';
 
 export default class Media extends Component{
-
   renderMediaItems(){
     if((!this.props.media || this.props.media.length == 0)){
       if(this.props.term && this.props.term !== ""){
@@ -28,8 +27,10 @@ export default class Media extends Component{
 
   render(){
     return(
+      <div className="grid-wrap">
       <div className="grid-media">
         {this.renderMediaItems()}
+      </div>
       </div>
     )
   }
