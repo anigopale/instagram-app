@@ -1,11 +1,11 @@
 .button-login {
-  background-color: #008CBA;
+  background-color: #009688;
   color: white;
   display: inline-block;
   text-align: center;
   padding: 15px 32px;
   float: right;
-  border: 1px solid #008CBA;
+  border: 1px solid #009688;
   cursor: pointer;
   border-radius: 6px;
   -webkit-transition-duration: 0.4s;
@@ -13,7 +13,7 @@
 }
 .button-login:hover {
   background-color: white;
-  color: #008CBA;
+  color: #009688;
 }
 .button-logout {
   background-color: #f44336;
