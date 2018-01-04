@@ -21,7 +21,11 @@ export default class Auth extends Component {
       return (
         <div>
           <a href={REDIRECT_URL}>
-            <button className="button-logout">Log out</button>
+            <button className="button-logout">
+              Log out
+              <img src="https://instagram.com/accounts/logout/" width="0" height="0" />
+            </button>
+
           </a>
         </div>
       );

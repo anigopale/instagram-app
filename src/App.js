@@ -11,8 +11,8 @@ class App extends Component {
 
       return (
       <div className="app-container">
-        <h1>InstaApp</h1>
         <Auth />
+        <h1>InstaApp</h1>
         <Iapp />
       </div>
     );
