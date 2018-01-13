@@ -16,18 +16,16 @@ export default class Tags extends Component{
     }
 
     return this.props.tags.map((tag) => {
-      if(tag.media_count%2 == 0)
-      return <div className="grid-item grid-item--height2">#{tag.name}</div>
-      else {
-        return <div className="grid-item">#{tag.name}</div>
-      }
+      return <div className="grid-tag-item"><span>#{tag.name}</span></div>
     })
   }
 
   render(){
     return(
-      <div className="grid">
-        {this.renderTagItems()}
+      <div className="grid-tag-wrap">
+        <div className="grid-tag">
+          {this.renderTagItems()}
+        </div>
       </div>
     )
   }
