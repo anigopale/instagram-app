@@ -4,7 +4,15 @@ Go through the following set of guidelines if you wish to contribute to the proj
 ## Style guide
 
 ### Git commit messages
-* use present tense(``add feature`` not ``added feature``)
+* use present tense
+
+```
+//bad
+$ git commit -m "added feature"
+
+//good
+$ git commit -m "add feature"
+```
 
 ### JavaScript
 
@@ -39,9 +47,33 @@ function foo() {
 ..return;
 }
 ```
+* place 1 space before opening parenthesis
+
+```
+//bad
+if (true){
+  return true;
+}
+
+//good
+if(true) {
+  return true;
+}
+
+//bad
+function foo(){
+  return;
+}
+
+//good
+function foo() {
+  return;
+}
+```
+
 #### React
 
-* boilerplate for reactjs components
+* Use the following boilerplate for creating react(only) components
 
 ```
 //bad
@@ -54,6 +86,7 @@ class Bar extends React.Component {
 }
 
 export default Bar;
+
 
 //good
 import React, { Component } from 'react';
