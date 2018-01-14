@@ -28,6 +28,11 @@
   -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
 }
+
+.button-logout img {
+  display: none;
+}
+
 .button-logout:hover {
   background-color: white;
   color: #f44336;
