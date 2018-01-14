@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { REDIRECT_URL } from '../assets/urls';
+import { REDIRECT_URL, LOGOUT_URL } from '../assets/urls';
 import { CLIENT_ID } from '../assets/client_id';
 import './style/auth.css';
 
@@ -20,7 +20,7 @@ export default class Auth extends Component {
     {
       return (
         <div>
-          <a href={REDIRECT_URL}>
+          <a href={LOGOUT_URL()}>
             <button className="button-logout">
               Log out
               <img src="https://instagram.com/accounts/logout/" width="0" height="0" />
