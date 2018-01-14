@@ -19,7 +19,7 @@ $ git commit -m "add feature"
 #### strings
 * use template literals(back-ticks) instead of concatenation
 
-```
+```javascript
 //bad
 function showNum(number) {
   return 'number is ' + number + '.';
@@ -36,7 +36,7 @@ function showNum(number) {
 #### whitespace
 * Use tab set to 2 spaces
 
-```
+```javascript
 //bad
 function foo() {
 ....return;
@@ -47,9 +47,10 @@ function foo() {
 ..return;
 }
 ```
+
 * place 1 space before opening parenthesis
 
-```
+```javascript
 //bad
 if (true){
   return true;
@@ -75,7 +76,7 @@ function foo() {
 
 * Use the following boilerplate for creating react(only) components
 
-```
+```javascript
 //bad
 import React from 'react';
 
